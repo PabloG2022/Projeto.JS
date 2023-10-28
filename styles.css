@@ -1,0 +1,84 @@
+* {          /* por habito sempre faça isso para que a pagina fique configurada*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   /* muda a forma como é visto as bordas no painel */
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+body{
+    background: url("./img/background.png");  /*colocar a imagem pelo próprio CSS*/
+}
+
+.container {
+    background-color: #d1d1d1;
+    width: 500px;    /* largura */
+    border-radius: 10px;  /*arredondar as bordas */
+    padding: 20px;  /* espaçamento */
+    margin-left: auto;       /* joga todo o background para esqueda */
+    margin-right: auto;    /* vai ficar no centro porque coloquei o margin-left e right no auto*/
+    margin-top: 100px;    /*distancia do topo da pagina quando mais pixels mais desce */
+}
+
+.input-task {
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;  /* isso faz com que o texto não fique tão colado na caixa*/
+}
+
+.button-add-task {
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #003329; /* cor da caixa do botão*/
+    color: #ffff; /*cor da letra do botão*/
+    font-size: 17px;
+    padding: 0 15px; /*em cima e embaixo vai fica zero e nas laterias 15px*/
+    float: right;  /*vai jogar o botão para a direita para não ficar colado a caixa de texto*/
+    cursor: pointer;  /*vai mudar o icone do cursor ao passar o mouse*/
+    font-weight: 700;  /*deixa a fonte mais grossa*/
+}
+
+.button-add-task:hover { /*hover serve para mudar o evento de passar o mouse*/
+    opacity: 0.8; /*transparência do intem*/
+}
+
+.button-add-task:active { /*quando clicar no botão vai ficar mais transparente*/
+    opacity: 0.6;
+}
+
+.list-tasks {
+    width: 100%; /*a ul vai ocupar a linha inteira*/
+    list-style: none; /*tira as bolinhas*/
+    margin-top: 30px;  /* espaçamento da margem de cada caixa de texto na parte de baixo*/
+}
+
+.task {
+    background-color: #f2f2f2;
+    box-shadow: 1px 4px 10px rgba(0,0,0,0.2);
+    height: 50px;
+    display: flex;  /*deixa todo mundo na mesma linha, align-items e justify-content fazem parte do display flex*/
+    align-items: center;   /**/
+    justify-content: space-between; /*deixa os itens distantes dos textos na horizontal*/
+    padding: 0 15px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* espaçamento da margem de cada caixa de texto na parte de baixo*/
+    cursor: pointer;
+}
+
+img {
+    height: 25px; 
+    opacity: 0;  /* a imagem some*/
+    transition: opacity 0.5s ease-in-out; /*faz com que a imagem apareça de uma forma mais suave 5 segundos*/
+}
+
+.task:hover img {
+    opacity: 1; /*a imagem vai aparecer quando passar o mouse*/
+}
+
+.done {
+    background-color: #8fac55;
+    text-decoration: line-through;
+}
